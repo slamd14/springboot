@@ -28,6 +28,13 @@ public class R<T> implements Serializable {
         return r;
     }
 
+    public static R success(String msg){
+        R r = new R();
+        r.msg = msg;
+        r.code = 1;
+        return r;
+    }
+
     public static <T> R<T> error(String msg) {
         R r = new R();
         r.msg = msg;
